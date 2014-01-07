@@ -1,0 +1,559 @@
+/*
+    css styles start
+*/
+body, table, tr, th, td, div, ul, li, a, strong, span, i,img,a,p{
+    padding:0;
+    margin:0
+}
+img{border:0}
+ul,li { list-style:none}
+body {
+    /*background: url(background.jpg) no-repeat fixed;*/
+    background-position:center;
+    font-family: arial;
+    overflow: hidden;
+    height:100%;
+    width:100%;
+    margin:0px;
+    background-attachment:fixed;/*必要，防抖动*/
+}
+
+/*
+ * wallpapers styles
+*/
+.wallpapers{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -100;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: url(background.jpg) no-repeat center;
+	background-attachment:fixed;/*必要，防抖动*/
+}
+
+/*
+ * desktop styles
+*/
+.desktop-panel{
+	overflow:hidden;
+    position:fixed;
+}
+
+.desktop-panel .desktop
+{
+	position:relative;
+	float:left;
+	overflow:hidden;
+	/*background:#09F;
+	opacity:0.5;*/
+}
+
+/*************************************************
+  Desktop Icons Containers
+ ************************************************/
+ 
+.desktop-panel .desktopicons {
+	margin:0px;
+	padding:0px;
+  width: 360px;
+}
+.desktop-panel .desktopicons li {
+	display:block;
+	padding:0px;
+	list-style:none;
+  width: 116px;
+  height:80px;
+  font-family: arial;
+  font-size: 12px;
+  float: left;
+ /* margin:10px 0 0 10px;*/
+}
+.desktop-panel .desktopicons li img{
+	width:58px;
+	height:58px;
+	border:0px;
+	margin-top:3px;
+}
+
+.desktop-panel .desktopicons li p {
+  font-family: arial;
+  font-size: 12px;
+  margin:0;
+  padding:2px;
+}
+
+.desktop-panel .desktopicons li table {
+  width: 100%;
+  margin: 0px;
+}
+
+.desktop-panel .desktopicons li .bg-top {
+  height: 3px;
+}
+.desktop-panel .desktopicons li .bg-middle {
+  text-align: center;
+}
+.desktop-panel .desktopicons li .bg-bg {
+  text-align: center;
+  text-shadow: #fff 0px 0px 5px; 
+  cursor: default;
+  padding: 0px 2px 2px 2px;
+}
+
+.desktop-panel .desktopicons li .bg-bottom {
+  height: 3px;
+}
+
+.desktop-panel .desktopicons li.mouseover .bg-top {
+  background: url(IconsContainer/DIBgMouseout_top.png) no-repeat;
+}
+.desktop-panel .desktopicons li.mouseover .bg-middle {
+  background: url(IconsContainer/DIBgMouseover_middle.png) no-repeat; 
+}
+.desktop-panel .desktopicons li.mouseover .bg-bg {
+  background: url(IconsContainer/DIBgMouseover_bg.png) repeat-y; 
+}
+.desktop-panel .desktopicons li.mouseover .bg-bottom {
+  background: url(IconsContainer/DIBgMouseover_bottom.png) no-repeat; 
+}
+
+
+.desktop-panel .desktopicons li.mouseclicked .bg-top {
+  background: url(IconsContainer/DIBgClicked_top.png) no-repeat; 
+}
+.desktop-panel .desktopicons li.mouseclicked .bg-middle {
+  background: url(IconsContainer/DIBgClicked_middle.png) no-repeat; 
+}
+.desktop-panel .desktopicons li.mouseclicked .bg-bg {
+  background: url(IconsContainer/DIBgClicked_bg.png) repeat-y; 
+}
+.desktop-panel .desktopicons li.mouseclicked .bg-bottom {
+  background: url(IconsContainer/DIBgClicked_bottom.png) no-repeat; 
+}
+
+
+.desktop-panel .desktopicons li.mouseout .bg-top {
+  background: url(IconsContainer/DIBgMouseout_top.png) no-repeat; 
+}
+.desktop-panel .desktopicons li.mouseout .bg-middle {
+  background: url(IconsContainer/DIBgMouseout_middle.png) no-repeat; 
+}
+.desktop-panel .desktopicons li.mouseout .bg-bg {
+  background: url(IconsContainer/DIBgMouseout_bg.png) repeat-y; 
+}
+.desktop-panel .desktopicons li.mouseout .bg-bottom {
+  background: url(IconsContainer/DIBgMouseout_bottom.png) no-repeat; 
+}
+
+
+/*
+ * aerowindow style
+*/
+.aerowindow-panel .aerowincontainer{position:relative;border-radius:10px; }
+.aerowindow-panel .aerowindow {
+    position: relative;
+    background: url(AeroWinStyle/lines.png) 0px -100px;
+    /*overflow: hidden;*/
+	font-size:12px;
+    display: block;
+}
+.aerowindow-panel .aerowindow .tdbg {
+    background-image:url(AeroWinStyle/aerowindow-edge.png);
+    width:9px;
+    height:9px;
+}
+.aerowindow-panel .aerowindow .tdtl {
+    background-position:left top;
+}
+.aerowindow-panel .aerowindow .tdtm {
+    background-position: 0 -9px;
+    background-repeat:repeat-x;
+}
+.aerowindow-panel .aerowindow .tdtr {
+    background-position:0 -18px;
+}
+.aerowindow-panel .aerowindow .tdrm {
+    background:url(AeroWinStyle/edge.png) repeat-y;
+    width:9px;
+}
+.aerowindow-panel .aerowindow .tdbr {
+    background-position:0 -36px;
+}
+.aerowindow-panel .aerowindow .tdbm {
+    background-position:0 -45px;
+}
+.aerowindow-panel .aerowindow .tdbl {
+    background-position:0 -54px;
+}
+.aerowindow-panel .aerowindow .tdlm {
+    background:url(AeroWinStyle/edge.png) repeat-y -9px top;
+    width:9px;
+}
+.aerowindow-panel .aerowindow .tdmm {
+    background:url(AeroWinStyle/inactive-mm.png);
+}
+
+
+
+
+
+/*************************************************
+	AeroWindow Style active
+ *************************************************/
+ 
+.aerowindow-panel .aerowindow.active .tdbg {
+	background-image:url(AeroWinStyle/aerowindow-edge.png);
+	width:9px;
+	height:9px;
+}
+.aerowindow-panel .aerowindow.active .tdtl {
+	background-position:left -90px;
+}
+.aerowindow-panel .aerowindow.active .tdtm {
+	background-position: 0 -99px;
+	background-repeat:repeat-x;
+}
+.aerowindow-panel .aerowindow.active .tdtr {
+	background-position:0 -108px;
+}
+.aerowindow-panel .aerowindow.active .tdrm {
+	background:url(AeroWinStyle/edge.png) repeat-y -30px top;
+	width:9px;
+}
+.aerowindow-panel .aerowindow.active .tdbr {
+	background-position:0 -126px;
+}
+.aerowindow-panel .aerowindow.active .tdbm {
+	background-position:0 -135px;
+}
+.aerowindow-panel .aerowindow.active .tdbl {
+	background-position:0 -144px;
+}
+.aerowindow-panel .aerowindow.active .tdlm {
+	background:url(AeroWinStyle/edge.png) repeat-y -39px top;
+	width:9px;
+}
+.aerowindow-panel .aerowindow.active .tdmm {
+	background:url(AeroWinStyle/active-mm.png);
+}
+
+
+/*---------------------------------------------------
+	AeroWindow Buttons Regular Window top: -6px;
+-----------------------------------------------------*/
+.aerowindow-panel .aerowindow .win-btns {
+	position: absolute;
+	right:9px;
+	top:4px;
+}
+.aerowindow-panel .aerowindow .win-btns a{
+	background:url(AeroWinStyle/areowindow-btns.png);
+	display:block;
+	float:left;
+	height: 19px;
+	width: 30px;
+}
+
+.aerowindow-panel .aerowindow .win-btns a.minbtn {
+	width: 31px;
+	background-position:left top;
+}
+.aerowindow-panel .aerowindow .win-btns a.maxbtn {
+	background-position:-30px -60px;
+}
+.aerowindow-panel .aerowindow .win-btns a.regbtn {
+	background-position:0 -60px;
+    display:none;
+}
+.aerowindow-panel .aerowindow .win-btns .closebtn {
+	background-position:-40px top;
+	width: 50px;
+}
+.aerowindow-panel .aerowindow .win-btns .foldbtn {
+	background-position:-90px top;
+	width: 20px;
+	margin:2px 10px 0 10px;
+}
+
+/*---------------------------------------------------
+	AeroWindow Buttons Regular Window Active
+-----------------------------------------------------*/
+
+.aerowindow-panel .aerowindow.active .win-btns a.minbtn {
+	width: 31px;
+	background-position:left -19px;
+}
+.aerowindow-panel .aerowindow.active .win-btns a.maxbtn {
+    background-position:0 -79px;
+}
+.aerowindow-panel .aerowindow.active .win-btns a.regbtn {
+	background-position:-30px -79px;
+}
+.aerowindow-panel .aerowindow.active .win-btns .closebtn {
+	background-position:-40px -19px;
+	width: 50px;
+}
+
+/*---------------------------------------------------
+	AeroWindow Buttons Regular Window Hover
+-----------------------------------------------------*/
+.aerowindow-panel .aerowindow .win-btns a.minbtn:hover {
+	width: 31px;
+	background-position:left -38px;
+}
+.aerowindow-panel .aerowindow .win-btns a.maxbtn:hover {
+    background-position:0 -98px;
+}
+.aerowindow-panel .aerowindow .win-btns a.regbtn:hover {
+	background-position:-30px -98px;
+}
+.aerowindow-panel .aerowindow .win-btns .closebtn:hover {
+	background-position:-40px -38px;
+	width: 50px;
+}
+
+/*---------------------------------------------------
+	AeroWindow Buttons Regular Window Tile
+-----------------------------------------------------*/
+.aerowindow-panel .aerowindow .win-title{
+  margin:0px;
+  text-shadow: #fff 0px 0px 5px; 
+  color: #333;
+  font-family: arial;
+  padding-right: 5px;
+  font-size: 14px;
+  left: 10px;
+  cursor: default;
+}
+.aerowindow-panel .aerowindow .win-title img {
+	width:22px;
+	height:22px;
+    border-radius: 8px;
+}
+.aerowindow-panel .aerowindow .win-title span {
+	padding-left: 5px;
+	line-height:22px;
+}
+
+/*---------------------------------------------------
+	AeroWindow Buttons Regular Window Tile
+-----------------------------------------------------*/
+.aerowindow-panel .aerowindow .win-container{
+	margin-top:5px;
+    overflow: hidden;
+}
+.aerowindow-panel .aerowindow .win-container .win-content{
+	font-family: arial;
+  border: 1px solid #999;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+    overflow: auto;
+  height:100%;
+  background: #fff;
+}
+
+.aerowindow-panel .aerowindow .win-container .win-leftnav
+{
+	width:100px;
+	overflow:hidden;
+	height:100%;
+	position:absolute;
+	border-right:2px solid #00F;
+}
+.aerowindow-panel .aerowindow .win-statusbar{
+	border-radius: 0px 0px 3px 3px;
+    -moz-border-radius: 0px 0px 3px 3px;
+	background:url(AeroWinStyle/active-mm.png);
+}
+
+
+
+/*******************************************************
+	Taskbar Menu
+ ******************************************************/
+.aerotaskbar{
+  position: fixed;
+  z-index: 10000;
+  /*display: none;*/ 
+}
+
+.aerotaskbar.tskbg-hori {
+	width: 100%;
+  height: 40px;
+  background: url(Taskbar/TaskBar-bg-hori.png) repeat-x;
+}
+.aerotaskbar.horiTop{
+  bottom: auto;
+  top:0px;
+  background-position:left bottom;
+}
+.aerotaskbar.horiBottom{
+  bottom:0px;
+  top:auto;
+  background-position:left top;
+  _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+}
+
+.aerotaskbar.tskbg-vert {
+  background: url(Taskbar/TaskBar-bg-vert.png) repeat-y; 
+  /*display: none;*/
+  height: 100%;
+  width: 44px;
+}
+.aerotaskbar.vertLeft{
+  right: auto;
+  left:0px;
+  float:left;
+  background-position:right top;
+}
+.aerotaskbar.vertRight{
+  right: 0px;
+  left:auto;
+  float:right;
+  background-position:left top;
+}
+
+.taskbarseparate{ 
+	background: url(Taskbar/TaskbarSeparate.png);
+	height: 39px;
+	width: 10px;
+	float: left;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.aerotaskbar .showhideallwin {
+  background: url(Taskbar/TaskbarShowDesktopItem.png);
+  height: 39px;
+  width: 14px;
+  float: right;
+  margin-right:2px;
+}
+.aerotaskbar .showHideallwin.hover {
+  background-position: 0px -39px;
+}
+.aerotaskbar .taskbar-left{
+	width:77%;
+	overflow:hidden;
+	float:left;
+	margin:0px;
+	height:40px;
+	position:relative;
+}
+/*.aerotaskbar .taskbar-left ul.mindesktopicons{
+	overflow:hidden;
+	float:left;
+	margin:0px;
+	height:40px;
+	position:relative;
+}*/
+
+.aerotaskbar .taskbar-left .taskbarhandle{
+	display:none;
+}
+
+.aerotaskbar .taskbar-left .t-leftHandle{
+	background:url(Taskbar/taskbar-left.gif) left;
+	height:40px; width:25px;
+	float:left;
+	margin-right:5px;}
+.aerotaskbar .taskbar-left .t-rightHandle{
+	background:url(Taskbar/taskbar-right.gif) right;
+	height:40px; width:25px;
+	float:left;
+	margin-right:0px;}
+
+.aerotaskbar .taskbar-left ul.mindesktopicons li.taskbar-item {
+  background: url(Taskbar/TaskbarItem.png);
+  height: 39px;
+  width: 60px;
+  float: left;
+  margin-right: 2px;
+}
+.aerotaskbar .taskbar-left ul.mindesktopicons li.taskbar-item.hover {
+  background: url(Taskbar/TaskbarItemHover.png);
+}
+.aerotaskbar .taskbar-left ul.mindesktopicons li.taskbar-item.active {
+  background: url(Taskbar/TaskbarItemActive.png);
+}
+.aerotaskbar .taskbar-left ul.mindesktopicons li.taskbar-item:hover {
+  background: url(Taskbar/TaskbarItemActiveHover.png);
+}
+.aerotaskbar ul li.taskbar-item img{
+  height: 32px;
+  width: 32px;
+  position: relative;
+  top: 4px;
+  left: 14px;
+    border-radius: 6px;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+}
+.aerotaskbar .taskbar-right{
+	width:100px;
+	float:right;
+}
+.aerotaskbar .taskbar-right li.taskbar-item{
+	float:right;
+	 height: 39px;
+  width: 60px;
+  margin-right: 2px;
+}
+.aerotaskbar .taskbar-right ul.appicons{
+	
+}
+
+/*********************************************************
+	StartMenu Button
+ *********************************************************/
+.startmenu-btn {
+	background: url(Taskbar/StartBtnIcon.png) 0 -7px no-repeat;
+	width:46px;
+	height:39px;
+	float:left;
+	padding-left:10px;
+}
+.startmenu-btn.hover {
+  background-position: 0px -61px;
+}
+.startmenu-btn.active {
+  background-position: 0px -115px;
+}
+
+/*********************************************************
+	desktopbarhelper
+ *********************************************************/
+ .desktopbarhelper
+ {
+	 width:210px;
+	 position:absolute;
+	 height:40px;
+	 margin:0 auto;
+	 border-radius:10px;
+	 z-index:99999;
+	 display:block;
+	 background:#3CF;
+	 opacity:0.8;
+	 top:30px; right:50px;
+ }
+ .desktopbarhelper ul.desktopbar{
+ }
+ 
+.desktopbarhelper ul.desktopbar > li{
+	background:#F00;
+	border-radius:20px;
+	 float:left;
+	 width:40px;
+	 margin:0 0 0 10px;
+	 line-height:40px;
+	 text-align:center;
+	 opacity:0.9
+ }
+ .desktopbarhelper ul.desktopbar > li.selected{
+	 background:#36F
+ }
+ .desktopbarhelper ul.desktopbar > li > a{
+	 display:block
+ }
